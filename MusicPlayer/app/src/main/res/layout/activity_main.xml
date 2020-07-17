@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_launcher_app"
+    android:padding="5dp"
+    tools:context="com.example.musicplayer.MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <ImageButton
+            android:id="@+id/ibtn_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_media_previous" />
+
+        <ImageButton
+            android:id="@+id/ibtn_playorpause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ibtn_previous"
+            android:src="@android:drawable/ic_media_play" />
+
+        <ImageButton
+            android:id="@+id/ibtn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ibtn_playorpause"
+            android:src="@android:drawable/ic_media_next" />
+
+
+
+        <ImageButton
+            android:id="@+id/ibtn_getposition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@android:drawable/ic_menu_mylocation"
+
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_playstate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_above="@id/rl_music"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/rg_playstate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            >
+
+            <RadioButton
+                android:id="@+id/rbtn_playsequence"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/selector_sequence"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rbtn_playrandowm"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_toLeftOf="@id/rbtn_playsequence"
+                android:background="@drawable/selector_random"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rbtn_playsingle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@id/rbtn_playsequence"
+                android:background="@drawable/selector_single"
+                android:button="@null" />
+
+
+        </RadioGroup>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_musictip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/rl_playstate"
+        android:padding="10dp"
+        android:text="您播放的歌为"
+        android:textColor="#ffdfce"
+        android:textSize="17sp" />
+
+    <ListView
+        android:id="@+id/lv_musiclist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_musictip"
+
+        />
+
+
+</RelativeLayout>

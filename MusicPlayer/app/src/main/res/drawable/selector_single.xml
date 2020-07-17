@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:drawable="@drawable/play_list_mode_repeat_one"
+        ></item>
+    <item android:drawable="@drawable/playmode_repeate_single_hover"></item>
+</selector>
